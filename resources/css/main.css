@@ -8,7 +8,7 @@ html,body {
 }
 
 body {
-    font-family: "Clarkson", Helvetica;
+    font-family:  Roboto;
     line-height: 1em;
     background:rgb(226, 253, 253); /* Ensures text color is white */
     color: white;
@@ -24,7 +24,6 @@ body {
     height: auto;
     width: 100%;
     max-height: 40vh;
-    opacity: .5;
     border-radius: 50px;
     overflow:visible;
     display: block;
@@ -32,9 +31,11 @@ body {
 
 /* Taskbar Styling */
 #taskbar {
-    background-color: #ff5151; 
+    background-color: #0f3340e6; 
     text-align: center;
     padding: 20px 0; /* Updated padding for better visual spacing */
+    border-top: 1px solid #ffffff; 
+    border-bottom: 1px solid #ffffff;    /* Adds a nice border around the text box */ ;
 }
 
 #taskbar ul {
@@ -47,7 +48,7 @@ body {
 
 #taskbar li {
     display: inline-block; /* Changed to inline-block for better control */
-    margin: 0 10px; /* Adjusted margin for better spacing */
+    margin: 10 10px; /* Adjusted margin for better spacing */
     padding: 10px 20px; /* Padding for clickable area */
     border-right: 2px solid white; /* Adds a white border to separate items */
     border-radius: 5px; /* Rounded corners */
@@ -60,7 +61,7 @@ body {
 
 #taskbar li:hover {
     background-color: white;
-    color: #b62a2a; /* Dark red text on hover */
+    color: #0f3340e6; /* Dark red text on hover */
 }
 
 #taskbar a img {
@@ -75,12 +76,68 @@ body {
     font-size: 20px;
     display: flex; /* Makes the text and the image align nicely */
     align-items: center; /* Centers the items vertically */
+    font-weight: bold;
+}
+
+/* Content Styling */
+#content {
+    display: flex;                /* Enables flexbox */
+    justify-content: center;      /* Centers content horizontally */
+    width: 100%;                  /* Ensures the container fills the width of its parent */
+    background-color:#cee0d4; /* Optional: ensures background does not affect design */
+    border-bottom: 1px solid #ffffff;    /* Adds a nice border around the text box */ ;
+
+}
+
+#content .about {
+    border-radius: 5px;
+    flex: 1;                       /* Allows the text box to grow as needed */
+    background-color: #26475332;    /* Dark background for content */
+    padding: 20px;                /* Adjusted padding for a more balanced spacing */
+    border: 3px transparent;    /* Adds a nice border around the text box */
+    text-align: left;             /* Text alignment to the left */
+    width: auto;               /* Limits the maximum width to maintain aesthetics */
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    height: auto;
+    background-image: url("../images/pattern.png"); 
+    background-size: cover;        /* Cover the entire area of the element without stretching */
+    background-position: center;   /* Center the background image within the element */
+    background-repeat: no-repeat;  /* Do not repeat the background image */
+    
+}
+
+#content .about .aboutme {
+    font-family: cursive;
+    font-size: xx-large;
+    text-align: center;
+}
+
+#content .about p {
+    font-family: cursive;
+    font-size: 30px;
+    text-align: center;
+}
+
+#content .image {
+    flex: 1;                       /* Allows the image box to grow as needed */
+    display: flex;                /* Ensures that any content within this div is also flex (if needed) */
+    align-items: center;          /* Centers content vertically within the image area */
+    justify-content: center;      /* Centers content horizontally within the image area */
+    max-width:fit-content;         /* Limits the maximum width to maintain aesthetics */
+    opacity: .8;
+}
+
+#content .image img {
+    width: 100%;                  /* Adjusts the width to fill the container */
+    height: auto;                 /* Keeps the image's aspect ratio */
 }
 
 
 
-
-#content {
+#footer {
     background-color: #333; /* Dark background for content */
     text-align: center;
     padding: 50px 20px;
