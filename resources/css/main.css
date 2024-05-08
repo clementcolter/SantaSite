@@ -15,9 +15,46 @@ body {
     font-size: 15px;
 }
 
-/* Hero Section Styling */
 #santa {
     text-align: center;
+    height: auto;
+    width: 100%;
+    max-height: 40vh;
+    border-radius: 50px;
+}
+  
+#count {
+    position: relative; /* Context for absolute positioning of children */
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+
+#countdown {
+    display: flex;
+    align-items: center;
+    position: relative;
+    animation: 15s slide infinite linear;
+    font-size: 50px;
+    width: 100%; /* Ensures text alignment and animation boundaries are correct */
+    text-align: center; /* Centers the text, adjust as needed */
+    color: red;
+}
+
+#countdown img{
+    position: inherit;
+    animation: 15s slide infinite linear;
+    height: 70px;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(100%); /* starts off-screen to the right */
+    }
+    to {
+        transform: translateX(-100%); /* ends off-screen to the left, adjust based on your text width */
+    }
 }
 
 #santa img {
@@ -26,23 +63,26 @@ body {
     max-height: 40vh;
     border-radius: 50px;
     overflow:visible;
+    border-bottom: 1px solid #ffffff;    /* Adds a nice border around the text box */
     display: block;
 }
 
 /* Taskbar Styling */
 #taskbar {
-    background-color: #0f3340e6; 
+    background: linear-gradient(to right, #0f3340e6, #7ab6cbcc);
     text-align: center;
-    padding: 20px 0; /* Updated padding for better visual spacing */
-    border-top: 1px solid #ffffff; 
-    border-bottom: 1px solid #ffffff;    /* Adds a nice border around the text box */ ;
+    padding: 20px 0;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 #taskbar ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: left; /* Centers the navigation items horizontally */
+    justify-content: center; /* Centers the navigation items horizontally */
     margin: 0;
 }
 
@@ -97,7 +137,7 @@ body {
     border: 3px transparent;    /* Adds a nice border around the text box */
     text-align: left;             /* Text alignment to the left */
     width: auto;               /* Limits the maximum width to maintain aesthetics */
-    margin-top: 5px;
+    margin-top: 25px;
     margin-right: 10px;
     margin-bottom: 5px;
     margin-left: 5px;

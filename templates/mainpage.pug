@@ -3,9 +3,8 @@ html
   head
     title SawSanta
     link(rel='stylesheet' type='text/css' href='../css/main.css')
+    script(src='../js/main.js' type='text/javascript' defer='')
   body
-    section#santa
-      img(src='../images/saw.webp')
     header
       nav#taskbar
         ul
@@ -18,7 +17,11 @@ html
             a(href='#pricing') Pricing
           li
             a(href='#contact') Contact
-
+    section#santa
+      img#santaImage(src='../images/saw.webp', alt='Santa Image')
+    section#count
+      div#countdown
+        img(src='../images/train.png', alt='Train Image')
     section#content
       .about
         .aboutme 
